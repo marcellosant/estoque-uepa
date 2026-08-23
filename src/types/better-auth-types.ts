@@ -37,7 +37,7 @@ export interface CustomAuthClient {
       options?: {
         onRequest?: () => void;
         onSuccess?: () => void;
-        onError?: (error: string) => void;
+        onError?: (ctx: { error: { message?: string } }) => void;
       }
     ) => Promise<void>;
   };
@@ -47,7 +47,7 @@ export interface CustomAuthClient {
       options?: {
         onRequest?: () => void;
         onSuccess?: () => void;
-        onError?: (error: string) => void;
+        onError?: (ctx: { error: { message?: string } }) => void;
       }
     ) => Promise<void>;
   };

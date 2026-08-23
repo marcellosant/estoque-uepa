@@ -47,7 +47,7 @@ export default function Page() {
           setLoading(false);
         },
         onError: (ctx) => {
-          toast.error("Erro ao fazer login" + ctx);
+          toast.error(ctx.error.message || "Erro ao fazer login");
           setLoading(false);
         },
       }

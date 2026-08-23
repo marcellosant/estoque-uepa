@@ -54,7 +54,7 @@ export default function Page() {
           setLoading(false);
         },
         onError: (ctx) => {
-          toast.error("Erro ao fazer cadastro: " + ctx);
+          toast.error(ctx.error.message || "Erro ao fazer cadastro");
           setLoading(false);
         },
       }
