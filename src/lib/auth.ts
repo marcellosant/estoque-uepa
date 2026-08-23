@@ -17,5 +17,6 @@ export const auth = betterAuth({
   trustedOrigins: [
     "http://localhost:3000",
     "https://api-estoque-7wp0.onrender.com",
-  ],
+    process.env.BETTER_AUTH_URL,
+  ].filter((origin): origin is string => Boolean(origin)),
 });
